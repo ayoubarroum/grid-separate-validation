@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:800&display=swap');
+$colors:(red: hsl(0, 100%, 74%),
+    green:hsl(154, 59%, 51%),
+    blue:hsl(248, 32%, 49%),
+    dark-blue:hsl(249, 10%, 26%),
+    grayish-blue:hsl(246, 25%, 77%),
+    dark-green: darken(hsl(154, 59%, 51%), 15%));
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+$desktop:840px;
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: color(red);
+    background-image: url("../images/bg-intro-mobile.png");
+    //  ../images/bg-intro-desktop.png
+    margin: auto;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+
+    @include desktop {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "copyr form"
+            "footer .";
+    }
+
+    section#copy {
+        margin-top: 85px;
+        grid-area: copyr;
+
+        h1 {
+            width: 80%;
+            font-size: 27px;
+            margin: auto;
+            color: white;
+            letter-spacing: .03em;
+            line-height: 1.3em;
+            margin-bottom: 21px;
+
+            @include desktop {
+                width: 55%;
+                font-size: 37px;
+                margin-left: 166px;
+                text-align: left;
+                padding-top: 95px;
+            }
+        }
+
+        p {
+            width: 86%;
+            color: white;
+            letter-spacing: .01em;
+            margin: auto;
+            margin-top: 15px;
+
+            @include desktop {
+                width: 82%;
+                text-align: left;
+                margin-left: 162px;
+                margin-top: 22px;
+            }
+        }
+
+
+    }
+
+    section#form {
+        margin-bottom: 23px;
+        grid-area: form;
+
+        @include desktop {
+            margin-right: 52px;
+        }
+
+        button.try {
+            -webkit-appearance: none;
+            background-color: color(blue);
+            border: none;
+            margin-top: 52px;
+            margin-bottom: 15px;
+            border: 1px solid color(blue);
+            padding: 0;
+            border-radius: 7px;
+            box-shadow: 0 7px rgba(0, 0, 0, 0.1);
+
+
+            p {
+
+                width: 60%;
+                margin: auto;
+                padding: 14px 24px;
+                color: white;
+                font-weight: 400;
+                line-height: 1.5em;
+                letter-spacing: .008em;
+                -webkit-text-stroke: 0px;
+                font-family: 'poppins';
+
+                @include desktop {
+                    padding: 14px 92px;
+                }
+
+                strong {
+                    font-weight: 700;
+                    font-family: 'poppins';
+                }
+            }
+        }
+
+        form {
+            background-color: white;
+            width: 320px;
+            margin: auto;
+            border-radius: 11px;
+            padding-top: 17px;
+            padding-bottom: 16px;
+            box-shadow: 0 7px rgba(0, 0, 0, 0.1);
+
+            @include desktop {
+                width: 461px;
+                padding-top: 31px;
+                padding-bottom: 28px;
+                
+            }
+
+            div {
+                .error_icon {
+                    display: none;
+
+                }
+
+                img {
+                    z-index: 2;
+                    position: absolute;
+                    right: 61px;
+                    margin-top: 9px;
+
+                    @include desktop {
+                        right: 180px;
+                        margin-top: 13px;
+                    }
+                }
+
+                input {
+
+
+
+                    border: none;
+                    border: 0.5px solid grey;
+                    padding: 14px 0;
+                    width: 249px;
+                    padding-left: 19px;
+                    border-radius: 5px;
+                    -webkit-font-smoothing: subpixel-antialiased;
+                    font-size: 17px;
+
+                    @include desktop {
+                        width: 371px;
+                    }
+
+
+                }
+
+                ::placeholder {
+                    font-family: 'poppins';
+                    font-weight: 800;
+                }
+
+                p {
+                    color: red;
+                    margin-top: 0;
+                    text-align: right;
+                    margin-right: 19px;
+                    font-size: 13px;
+
+                    @include desktop {
+                        margin-right: 31px;
+                    }
+                }
+
+            }
+        }
+
+        button.claim {
+            -webkit-appearance: none;
+            border: none;
+            background-color: color(green);
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            padding: 18px 38px;
+            border-radius: 5px;
+            letter-spacing: .1em;
+            -webkit-font-smoothing: subpixel-antialiased;
+            border-bottom: 4px solid color(dark-green);
+
+            @include desktop {
+                padding: 18px 98px;
+            }
+        }
+
+        p.policy {
+            color: color(grayish-blue);
+            width: 83%;
+            font-size: .7em;
+            margin: auto;
+            padding-top: 6px;
+
+            @include desktop {
+                font-size: .6em;
+                padding-top: 13px;
+            }
+
+            strong {
+                color: color(red);
+            }
+        }
+
+    }
+
+    footer {
+        grid-area: footer;
+
+        @include desktop {
+            margin-top: 50px;
+        }
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+
+            a {
+                color: hsl(228, 45%, 44%);
+            }
+        }
+
+
+    }
+
+
+
+
+}

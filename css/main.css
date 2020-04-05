@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:800&display=swap");
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ff7a7a;
+  background-image: url("../images/bg-intro-mobile.png");
+  margin: auto;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 840px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "copyr form" "footer .";
+  }
+}
+
+body section#copy {
+  margin-top: 85px;
+  grid-area: copyr;
+}
+
+body section#copy h1 {
+  width: 80%;
+  font-size: 27px;
+  margin: auto;
+  color: white;
+  letter-spacing: .03em;
+  line-height: 1.3em;
+  margin-bottom: 21px;
+}
+
+@media (min-width: 840px) {
+  body section#copy h1 {
+    width: 55%;
+    font-size: 37px;
+    margin-left: 166px;
+    text-align: left;
+    padding-top: 95px;
+  }
+}
+
+body section#copy p {
+  width: 86%;
+  color: white;
+  letter-spacing: .01em;
+  margin: auto;
+  margin-top: 15px;
+}
+
+@media (min-width: 840px) {
+  body section#copy p {
+    width: 82%;
+    text-align: left;
+    margin-left: 162px;
+    margin-top: 22px;
+  }
+}
+
+body section#form {
+  margin-bottom: 23px;
+  grid-area: form;
+}
+
+@media (min-width: 840px) {
+  body section#form {
+    margin-right: 52px;
+  }
+}
+
+body section#form button.try {
+  -webkit-appearance: none;
+  background-color: #6055a5;
+  border: none;
+  margin-top: 52px;
+  margin-bottom: 15px;
+  border: 1px solid #6055a5;
+  padding: 0;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 7px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 7px rgba(0, 0, 0, 0.1);
+}
+
+body section#form button.try p {
+  width: 60%;
+  margin: auto;
+  padding: 14px 24px;
+  color: white;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: .008em;
+  -webkit-text-stroke: 0px;
+  font-family: 'poppins';
+}
+
+@media (min-width: 840px) {
+  body section#form button.try p {
+    padding: 14px 92px;
+  }
+}
+
+body section#form button.try p strong {
+  font-weight: 700;
+  font-family: 'poppins';
+}
+
+body section#form form {
+  background-color: white;
+  width: 320px;
+  margin: auto;
+  border-radius: 11px;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  -webkit-box-shadow: 0 7px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 7px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 840px) {
+  body section#form form {
+    width: 461px;
+    padding-top: 31px;
+    padding-bottom: 28px;
+  }
+}
+
+body section#form form div .error_icon {
+  display: none;
+}
+
+body section#form form div img {
+  z-index: 2;
+  position: absolute;
+  right: 61px;
+  margin-top: 9px;
+}
+
+@media (min-width: 840px) {
+  body section#form form div img {
+    right: 180px;
+    margin-top: 13px;
+  }
+}
+
+body section#form form div input {
+  border: none;
+  border: 0.5px solid grey;
+  padding: 14px 0;
+  width: 249px;
+  padding-left: 19px;
+  border-radius: 5px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 17px;
+}
+
+@media (min-width: 840px) {
+  body section#form form div input {
+    width: 371px;
+  }
+}
+
+body section#form form div ::-webkit-input-placeholder {
+  font-family: 'poppins';
+  font-weight: 800;
+}
+
+body section#form form div :-ms-input-placeholder {
+  font-family: 'poppins';
+  font-weight: 800;
+}
+
+body section#form form div ::-ms-input-placeholder {
+  font-family: 'poppins';
+  font-weight: 800;
+}
+
+body section#form form div ::placeholder {
+  font-family: 'poppins';
+  font-weight: 800;
+}
+
+body section#form form div p {
+  color: red;
+  margin-top: 0;
+  text-align: right;
+  margin-right: 19px;
+  font-size: 13px;
+}
+
+@media (min-width: 840px) {
+  body section#form form div p {
+    margin-right: 31px;
+  }
+}
+
+body section#form button.claim {
+  -webkit-appearance: none;
+  border: none;
+  background-color: #38cc8c;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding: 18px 38px;
+  border-radius: 5px;
+  letter-spacing: .1em;
+  -webkit-font-smoothing: subpixel-antialiased;
+  border-bottom: 4px solid #269263;
+}
+
+@media (min-width: 840px) {
+  body section#form button.claim {
+    padding: 18px 98px;
+  }
+}
+
+body section#form p.policy {
+  color: #b9b6d3;
+  width: 83%;
+  font-size: .7em;
+  margin: auto;
+  padding-top: 6px;
+}
+
+@media (min-width: 840px) {
+  body section#form p.policy {
+    font-size: .6em;
+    padding-top: 13px;
+  }
+}
+
+body section#form p.policy strong {
+  color: #ff7a7a;
+}
+
+body footer {
+  grid-area: footer;
+}
+
+@media (min-width: 840px) {
+  body footer {
+    margin-top: 50px;
+  }
+}
+
+body footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+body footer .attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */
